@@ -308,7 +308,7 @@ hardware). Leave as None if such specialization is not necessary</p></li>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygama.raw.data_streamer.</span></span><span class="sig-name descname"><span class="pre">DataStreamer</span></span><a class="headerlink" href="#pygama.raw.data_streamer.DataStreamer" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
 <p>Base clase for data streams</p>
-<p>Provides a uniform interface for streaming, e.g.</p>
+<p>Provides a uniform interface for streaming, e.g.:</p>
 <p>&gt; header = ds.open_stream(stream_name)
 &gt; for chunk in ds: do_something(chunk)</p>
 <p>Also provides default management of the RawBufferLibrary used for data reading:

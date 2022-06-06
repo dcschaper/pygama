@@ -550,6 +550,11 @@ the object for that Orca unique id number.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pygama.raw.orca.orca_header.OrcaHeader.get_id_to_object_name_dict">
+<span class="sig-name descname"><span class="pre">get_id_to_object_name_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shift_data_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.orca.orca_header.OrcaHeader.get_id_to_object_name_dict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pygama.raw.orca.orca_header.OrcaHeader.get_object_info">
 <span class="sig-name descname"><span class="pre">get_object_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orca_class_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.orca.orca_header.OrcaHeader.get_object_info" title="Permalink to this definition"></a></dt>
 <dd><p>returns a list with all info from the header for each card with name
@@ -630,8 +635,9 @@ hardware). Leave as None if such specialization is not necessary</p></li>
 </section>
 <section id="module-pygama.raw.orca.orca_packet">
 <span id="pygama-raw-orca-orca-packet-module"></span><h2>pygama.raw.orca.orca_packet module<a class="headerlink" href="#module-pygama.raw.orca.orca_packet" title="Permalink to this headline"></a></h2>
-<p>orca packets are ndarrays of type uint32</p>
-<p>1 'word' is one uint32</p>
+<p>orca_packet provides convenience functions for working with orca packets.</p>
+<p>orca packets are ndarrays of type uint32
+1 'word' is one uint32</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="pygama.raw.orca.orca_packet.get_data_id">
 <span class="sig-prename descclassname"><span class="pre">pygama.raw.orca.orca_packet.</span></span><span class="sig-name descname"><span class="pre">get_data_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shift</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.orca.orca_packet.get_data_id" title="Permalink to this definition"></a></dt>
@@ -640,6 +646,11 @@ hardware). Leave as None if such specialization is not necessary</p></li>
 <dl class="py function">
 <dt class="sig sig-object py" id="pygama.raw.orca.orca_packet.get_n_words">
 <span class="sig-prename descclassname"><span class="pre">pygama.raw.orca.orca_packet.</span></span><span class="sig-name descname"><span class="pre">get_n_words</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.orca.orca_packet.get_n_words" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.raw.orca.orca_packet.hex_dump">
+<span class="sig-prename descclassname"><span class="pre">pygama.raw.orca.orca_packet.</span></span><span class="sig-name descname"><span class="pre">hex_dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shift_data_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_n_words</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_words</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_int</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_short</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.orca.orca_packet.hex_dump" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
