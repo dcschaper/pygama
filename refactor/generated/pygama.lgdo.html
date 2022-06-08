@@ -386,7 +386,7 @@ attributes</p></li>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.lh5_store.LH5Store.get_buffer">
-<span class="sig-name descname"><span class="pre">get_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lh5_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.lgdo.lh5_store.LH5Store.get_buffer" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lh5_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.lgdo.lh5_store.LH5Store.get_buffer" title="Permalink to this definition"></a></dt>
 <dd><p>Returns an lh5 object appropriate for use as a pre-allocated buffer
 in a read loop. Sets size to size if object has a size.</p>
 </dd></dl>
@@ -445,7 +445,7 @@ in lh5_file. Return None if it is a scalar/struct.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- Name of the lh5 object to be read (including its group path)</p></li>
-<li><p><strong>lh5_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> or </em><em>h5py File object</em><em>, or </em><em>a list of either</em>) -- The file(s) containing the object to be read oad out. If a list of
+<li><p><strong>lh5_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> or </em><em>h5py File object</em><em>, or </em><em>a list of either</em>) -- The file(s) containing the object to be read out. If a list of
 files, array-like object data will be concatenated into the output
 object</p></li>
 <li><p><strong>start_row</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em> (</em><em>optional</em><em>)</em>) -- Starting entry for the object read (for array-like objects). For a
