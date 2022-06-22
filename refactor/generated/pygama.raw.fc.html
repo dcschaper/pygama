@@ -59,6 +59,8 @@
 <li class="toctree-l4"><a class="reference internal" href="pygama.vis.html">pygama.vis package</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="pygama.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygama.html#module-pygama.cli">pygama.cli module</a></li>
 </ul>
 </li>
 </ul>
@@ -186,7 +188,7 @@ hardware). Leave as None if such specialization is not necessary</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.raw.fc.fc_event_decoder.FCEventDecoder.decode_packet">
-<span class="sig-name descname"><span class="pre">decode_packet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fcio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evt_rbkd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">packet_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.fc.fc_event_decoder.FCEventDecoder.decode_packet" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">decode_packet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fcio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evt_rbkd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">packet_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.fc.fc_event_decoder.FCEventDecoder.decode_packet" title="Permalink to this definition"></a></dt>
 <dd><p>access FCIOEvent members for each event in the raw file</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -197,7 +199,6 @@ fcio.get_record() so that data for packet_id ready to be read out</p></li>
 by channel number (i.e. as returned by raw_groups.build_tables())</p></li>
 <li><p><strong>packet_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- The index of the packet in the fcio stream. Incremented by
 fc_streamer</p></li>
-<li><p><strong>verbosity</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- verbosity level for packet decoding</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -253,7 +254,7 @@ fc_config = FCConfigDecoder.decode_config(fcio)</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.raw.fc.fc_status_decoder.FCStatusDecoder.decode_packet">
-<span class="sig-name descname"><span class="pre">decode_packet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fcio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_rb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">packet_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.fc.fc_status_decoder.FCStatusDecoder.decode_packet" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">decode_packet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fcio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_rb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">packet_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.fc.fc_status_decoder.FCStatusDecoder.decode_packet" title="Permalink to this definition"></a></dt>
 <dd><p>access FC status (temp., log, ...)</p>
 </dd></dl>
 
@@ -282,7 +283,7 @@ Needs to be overloaded. Gets called during open_stream().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.raw.fc.fc_streamer.FCStreamer.open_stream">
-<span class="sig-name descname"><span class="pre">open_stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fcio_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rb_lib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8192</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'any_full'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.fc.fc_streamer.FCStreamer.open_stream" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">open_stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fcio_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rb_lib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8192</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'any_full'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.fc.fc_streamer.FCStreamer.open_stream" title="Permalink to this definition"></a></dt>
 <dd><p>Initialize the FC data stream</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -292,7 +293,6 @@ Needs to be overloaded. Gets called during open_stream().</p>
 <li><p><strong>buffer_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- length of tables to be read out in read_chunk</p></li>
 <li><p><strong>chunk_mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- DOCME</p></li>
 <li><p><strong>out_stream</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- DOCME</p></li>
-<li><p><strong>verbosity</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- verbosity level for the initialize function</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -306,7 +306,7 @@ Needs to be overloaded. Gets called during open_stream().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.raw.fc.fc_streamer.FCStreamer.read_packet">
-<span class="sig-name descname"><span class="pre">read_packet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.fc.fc_streamer.FCStreamer.read_packet" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">read_packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.fc.fc_streamer.FCStreamer.read_packet" title="Permalink to this definition"></a></dt>
 <dd><p>Read a packet of data.</p>
 <p>Data written to self.rb_lib.
 Updates self.n_bytes_read</p>

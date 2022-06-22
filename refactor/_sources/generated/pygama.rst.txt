@@ -21,3 +21,15 @@ Subpackages
    pygama.pargen
    pygama.raw
    pygama.vis
+
+Submodules
+----------
+
+pygama.cli module
+-----------------
+
+.. automodule:: pygama.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:

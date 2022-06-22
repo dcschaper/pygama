@@ -59,6 +59,8 @@
 <li class="toctree-l4"><a class="reference internal" href="pygama.vis.html">pygama.vis package</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="pygama.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygama.html#module-pygama.cli">pygama.cli module</a></li>
 </ul>
 </li>
 </ul>
@@ -163,7 +165,7 @@ from each hardware decoder in their own output table.</p>
 <span id="pygama-raw-build-raw-module"></span><h2>pygama.raw.build_raw module<a class="headerlink" href="#module-pygama.raw.build_raw" title="Permalink to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pygama.raw.build_raw.build_raw">
-<span class="sig-prename descclassname"><span class="pre">pygama.raw.build_raw.</span></span><span class="sig-name descname"><span class="pre">build_raw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_stream_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_spec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8192</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.build_raw.build_raw" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pygama.raw.build_raw.</span></span><span class="sig-name descname"><span class="pre">build_raw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_stream_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_spec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8192</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.build_raw.build_raw" title="Permalink to this definition"></a></dt>
 <dd><p>Convert data into LEGEND HDF5 &quot;raw&quot; format.</p>
 <p>Takes an input stream of a given type and writes to output file(s)
 according to the user's a specification.</p>
@@ -173,10 +175,10 @@ according to the user's a specification.</p>
 <li><p><strong>in_stream</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- The name of the input stream to be converted. Typically a filename,
 including path. Can use environment variables. Some streamers may be
 able to (eventually) accept e.g. streaming over a port as an input.</p></li>
-<li><p><strong>in_stream_type</strong> (<em>{None</em><em>, </em><em>'ORCA'</em><em>, </em><em>'FlashCams'</em><em>, </em><em>'LlamaDaq'</em><em>, </em><em>'Compass'</em><em>, </em><em>'MGDO'}</em>) -- Type of stream used to write the input file.</p></li>
+<li><p><strong>in_stream_type</strong> (<em>{None</em><em>, </em><em>'ORCA'</em><em>, </em><em>'FlashCam'</em><em>, </em><em>'LlamaDaq'</em><em>, </em><em>'Compass'</em><em>, </em><em>'MGDO'}</em>) -- Type of stream used to write the input file.</p></li>
 <li><p><strong>out_spec</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em> or </em><a class="reference internal" href="#pygama.raw.raw_buffer.RawBufferLibrary" title="pygama.raw.raw_buffer.RawBufferLibrary"><em>RawBufferLibrary</em></a><em> or </em><em>None</em>) -- <p>Specification for the output stream.</p>
 <ul>
-<li><p>If None, uses <code class="docutils literal notranslate"><span class="pre">{in_stream}.hdf5</span></code> as the output filename.</p></li>
+<li><p>If None, uses <code class="docutils literal notranslate"><span class="pre">{in_stream}.lh5</span></code> as the output filename.</p></li>
 <li><p>If a str not ending in <code class="docutils literal notranslate"><span class="pre">.json</span></code>, interpreted as the output filename.</p></li>
 <li><p>If a str ending in <code class="docutils literal notranslate"><span class="pre">.json</span></code>, interpreted as a filename containing
 json-shorthand for the output specification (see <a class="reference internal" href="#module-pygama.raw.raw_buffer" title="pygama.raw.raw_buffer"><code class="xref py py-mod docutils literal notranslate"><span class="pre">raw_buffer</span></code></a>)</p></li>
@@ -190,7 +192,6 @@ group is taken from that.</p></li>
 <li><p><strong>buffer_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- Default size to use for data buffering</p></li>
 <li><p><strong>n_max</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- Maximum number of rows of data to process from the input file</p></li>
 <li><p><strong>overwrite</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- Sets whether to overwrite the output file(s) if it (they) already exist</p></li>
-<li><p><strong>verbosity</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- Sets the verbosity level. 0 gives the minimum output level.</p></li>
 <li><p><strong>**kwargs</strong> (<em>kwargs</em>) -- Sent to <a class="reference internal" href="#pygama.raw.raw_buffer.RawBufferLibrary" title="pygama.raw.raw_buffer.RawBufferLibrary"><code class="xref py py-class docutils literal notranslate"><span class="pre">RawBufferLibrary</span></code></a> generation as <code class="docutils literal notranslate"><span class="pre">kw_dict</span></code></p></li>
 </ul>
 </dd>
@@ -217,7 +218,7 @@ row at a time. See FlashCamEventDecoder or ORCAStruck3302 for an example.</p>
 do not need decoded_values. Such classes should still derive from
 DataDecoder and define how data gets formatted into lgdo's</p>
 <p>Subclasses should define a method for decoding data to a buffer like
-decode_packet(packet, raw_buffer_list, packet_id, verbosity=0)
+decode_packet(packet, raw_buffer_list, packet_id)
 This function should return the number of bytes read</p>
 <p>Garbage collection writes binary data as an array of uint32s to a
 variable-length array in the output file. If a problematic packet is found,
@@ -337,7 +338,7 @@ Needs to be overloaded. Gets called during open_stream().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.raw.data_streamer.DataStreamer.open_stream">
-<span class="sig-name descname"><span class="pre">open_stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rb_lib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8192</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'any_full'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.data_streamer.DataStreamer.open_stream" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">open_stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rb_lib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8192</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'any_full'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.data_streamer.DataStreamer.open_stream" title="Permalink to this definition"></a></dt>
 <dd><p>Open and initialize a data stream</p>
 <p>Open the stream, read in the header, set up the buffers</p>
 <p>Call super().initialize([args]) from derived class after loading header
@@ -356,7 +357,6 @@ have its lgdo's initialized during this function</p></li>
 variable length)</p></li>
 <li><p><strong>chunk_mode</strong> (<em>'any_full'</em><em>, </em><em>'only_full'</em><em>, or </em><em>'single_packet'</em>) -- sets the mode use for read_chunk</p></li>
 <li><p><strong>out_stream</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- optional name of output stream for default rb_lib generation</p></li>
-<li><p><strong>verbosity</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- verbosity level for the initialize function</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -372,7 +372,7 @@ RawBufferList since the buffers may have a different format</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.raw.data_streamer.DataStreamer.read_chunk">
-<span class="sig-name descname"><span class="pre">read_chunk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chunk_mode_override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rp_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear_full_buffers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.data_streamer.DataStreamer.read_chunk" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">read_chunk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chunk_mode_override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rp_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear_full_buffers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.data_streamer.DataStreamer.read_chunk" title="Permalink to this definition"></a></dt>
 <dd><p>Reads a chunk of data into raw buffers</p>
 <p>Reads packets until at least one buffer is too full to perform another
 read.</p>
@@ -399,7 +399,6 @@ one of the other conditions is not met</p></li>
 <li><p><strong>clear_full_buffers</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- automatically clear any buffers that report themselves as being full
 prior to reading the chunk. Set to False if clearing manually for a
 minor speed-up</p></li>
-<li><p><strong>verbosity</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- verbosity level for the initialize function</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -417,7 +416,7 @@ not all have the same structure</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.raw.data_streamer.DataStreamer.read_packet">
-<span class="sig-name descname"><span class="pre">read_packet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.data_streamer.DataStreamer.read_packet" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">read_packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.data_streamer.DataStreamer.read_packet" title="Permalink to this definition"></a></dt>
 <dd><p>Reads a single packet's worth of data in to the rb_lib</p>
 <p>Needs to be overloaded. Gets called by read_chunk()</p>
 <p>Needs to update self.any_full if any buffers would possibly over-fill on
@@ -706,7 +705,7 @@ RawBufferList to have non-overlapping key lists.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pygama.raw.raw_buffer.write_to_lh5_and_clear">
-<span class="sig-prename descclassname"><span class="pre">pygama.raw.raw_buffer.</span></span><span class="sig-name descname"><span class="pre">write_to_lh5_and_clear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_buffers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lh5_store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wo_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'append'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.raw_buffer.write_to_lh5_and_clear" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pygama.raw.raw_buffer.</span></span><span class="sig-name descname"><span class="pre">write_to_lh5_and_clear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_buffers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lh5_store</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wo_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'append'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.raw_buffer.write_to_lh5_and_clear" title="Permalink to this definition"></a></dt>
 <dd><p>Write a list of RawBuffers to lh5 files and then clears them</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -716,7 +715,6 @@ RawBufferList because the RawBuffers may not have the same structure.</p></li>
 <li><p><strong>lh5_store</strong> (<a class="reference internal" href="pygama.lgdo.html#pygama.lgdo.lh5_store.LH5Store" title="pygama.lgdo.lh5_store.LH5Store"><em>LH5Store</em></a><em> or </em><em>None</em>) -- Allows user to send in a store holding a collection of already open
 files (saves some time opening / closing files)</p></li>
 <li><p><strong>wo_mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- write mode, see also <a class="reference internal" href="pygama.lgdo.html#pygama.lgdo.lh5_store.LH5Store.write_object" title="pygama.lgdo.lh5_store.LH5Store.write_object"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lgdo.lh5_store.LH5Store.write_object()</span></code></a></p></li>
-<li><p><strong>verbosity</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- print debug messages</p></li>
 </ul>
 </dd>
 </dl>
