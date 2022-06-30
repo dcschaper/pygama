@@ -199,6 +199,15 @@ pygama.dsp.\_processors.trap\_filters module
    :show-inheritance:
    :private-members:
 
+pygama.dsp.\_processors.upsampler module
+----------------------------------------
+
+.. automodule:: pygama.dsp._processors.upsampler
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
 pygama.dsp.\_processors.wiener\_filter module
 ---------------------------------------------
 
