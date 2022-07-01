@@ -7,6 +7,7 @@
   <title>Developer&#39;s guide &mdash; pygama  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -16,6 +17,8 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -65,9 +68,9 @@
       <div class="rst-other-versions">
         <dl>
           <dt>Branches</dt>
-          <dd><a href="../releases/v0.9/index.html">releases/v0.9</a></dd>
-          <dd><a href="../main/index.html">main</a></dd>
           <dd><a href="developer.html">refactor</a></dd>
+          <dd><a href="../main/index.html">main</a></dd>
+          <dd><a href="../releases/v0.9/index.html">releases/v0.9</a></dd>
         </dl>
       </div>
     </div>
@@ -194,7 +197,7 @@ every proposed change or addition.</p></li>
 <li><p>Documentation for functions, classes, modules and packages should be provided
 as <a class="reference external" href="https://peps.python.org/pep-0257">Docstrings</a> along with the respective
 source code. Docstrings are automatically converted to HTML as part of the
-<code class="xref py py-mod docutils literal notranslate"><span class="pre">pygama</span></code> package API documentation.</p></li>
+<a class="reference internal" href="generated/pygama.html#module-pygama" title="pygama"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pygama</span></code></a> package API documentation.</p></li>
 <li><p>General guides, comprehensive tutorials or other high-level documentation
 (e.g. referring to how separate parts of the code interact between each
 other) must be provided as separate pages in <code class="docutils literal notranslate"><span class="pre">docs/source/</span></code> and linked in
@@ -214,7 +217,7 @@ Usage of <a class="reference external" href="https://www.sphinx-doc.org/en/maste
 in general and <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#cross-referencing-python-objects">for Python objects</a>
 in particular is recommended. We also support cross-referencing external
 documentation via <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html">sphinx.ext.intersphinx</a>,
-when referring for example to <code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>.</p></li>
+when referring for example to <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.4.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a>.</p></li>
 <li><p>To document Python objects, we also adopt the <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html">NumPy Docstring style</a>. Examples are
 available <a class="reference external" href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html">here</a>.</p></li>
 <li><p>We support also the Markdown format through the <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html">MyST-Parser</a>.</p></li>
@@ -287,7 +290,7 @@ the code at the intended stage is created</p></li>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, LEGEND Collaboration.</p>
+    <p>&#169; Copyright 2020, the LEGEND Collaboration.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
