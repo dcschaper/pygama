@@ -7,7 +7,6 @@
   <title>Contribution guidelines &mdash; pygama  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -17,8 +16,6 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -64,9 +61,9 @@
       <div class="rst-other-versions">
         <dl>
           <dt>Branches</dt>
-          <dd><a href="../../refactor/index.html">refactor</a></dd>
-          <dd><a href="../../main/contributing.html">main</a></dd>
           <dd><a href="contributing.html">releases/v0.9</a></dd>
+          <dd><a href="../../main/contributing.html">main</a></dd>
+          <dd><a href="../../refactor/index.html">refactor</a></dd>
         </dl>
       </div>
     </div>
@@ -138,7 +135,7 @@ followed:</p>
 <li><p>The <em>pygama</em> version is updated in <code class="docutils literal notranslate"><span class="pre">pygama/version.py</span></code></p></li>
 <li><p>A new branch with name <code class="docutils literal notranslate"><span class="pre">releases/vMAJOR.MINOR</span></code> (note the <code class="docutils literal notranslate"><span class="pre">v</span></code>) containing
 the code at the intended stage is created</p></li>
-<li><p>The commit is tagged: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">vMAJOR.MINOR.0</span></code> (note the <code class="docutils literal notranslate"><span class="pre">v</span></code>)</p></li>
+<li><p>The commit is tagged with a descriptive message: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">vMAJOR.MINOR.0</span> <span class="pre">-m</span> <span class="pre">'short</span> <span class="pre">descriptive</span> <span class="pre">message</span> <span class="pre">here'</span></code> (note the <code class="docutils literal notranslate"><span class="pre">v</span></code>)</p></li>
 <li><p>Changes are pushed to the remote: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--tags</span> <span class="pre">origin</span> <span class="pre">releases/vMAJOR.MINOR</span></code></p></li>
 </ul>
 </li>
@@ -177,7 +174,7 @@ as <em>docstrings</em>) for every proposed change or addition.</p></li>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, the LEGEND Collaboration.</p>
+    <p>&#169; Copyright 2020, LEGEND Collaboration.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
