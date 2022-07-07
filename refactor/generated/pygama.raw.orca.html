@@ -78,8 +78,8 @@
       <div class="rst-other-versions">
         <dl>
           <dt>Branches</dt>
-          <dd><a href="../../main/index.html">main</a></dd>
           <dd><a href="pygama.raw.orca.html">refactor</a></dd>
+          <dd><a href="../../main/index.html">main</a></dd>
           <dd><a href="../../releases/v0.9/index.html">releases/v0.9</a></dd>
         </dl>
       </div>
@@ -186,14 +186,11 @@ acquisition system.</p>
 <dt class="sig sig-object py" id="pygama.raw.orca.orca_digitizers.ORCAGretina4M.get_decoded_values">
 <span class="sig-name descname"><span class="pre">get_decoded_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.orca.orca_digitizers.ORCAGretina4M.get_decoded_values" title="Permalink to this definition"></a></dt>
 <dd><p>Get decoded values (optionally for a given key, typically a channel).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Must overload for your decoder if it has key-specific decoded
-values. Must also implement <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">None</span></code> returns a &quot;default&quot;
-<code class="docutils literal notranslate"><span class="pre">decoded_values</span></code>. Otherwise, just returns
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">self.decoded_values</span></code>, which should be defined in the
-constructor.</p>
-</div>
+<p class="rubric">Notes</p>
+<p>Must overload for your decoder if it has key-specific decoded values.
+Must also implement <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">None</span></code> returns a &quot;default&quot;
+<cite>decoded_values</cite>. Otherwise, just returns <code class="xref py py-attr docutils literal notranslate"><span class="pre">self.decoded_values</span></code>,
+which should be defined in the constructor.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -233,14 +230,11 @@ constructor.</p>
 <dt class="sig sig-object py" id="pygama.raw.orca.orca_digitizers.ORCAStruck3302.get_decoded_values">
 <span class="sig-name descname"><span class="pre">get_decoded_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.orca.orca_digitizers.ORCAStruck3302.get_decoded_values" title="Permalink to this definition"></a></dt>
 <dd><p>Get decoded values (optionally for a given key, typically a channel).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Must overload for your decoder if it has key-specific decoded
-values. Must also implement <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">None</span></code> returns a &quot;default&quot;
-<code class="docutils literal notranslate"><span class="pre">decoded_values</span></code>. Otherwise, just returns
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">self.decoded_values</span></code>, which should be defined in the
-constructor.</p>
-</div>
+<p class="rubric">Notes</p>
+<p>Must overload for your decoder if it has key-specific decoded values.
+Must also implement <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">None</span></code> returns a &quot;default&quot;
+<cite>decoded_values</cite>. Otherwise, just returns <code class="xref py py-attr docutils literal notranslate"><span class="pre">self.decoded_values</span></code>,
+which should be defined in the constructor.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -278,14 +272,11 @@ most metadata of Struck header (energy, ...)</p>
 <dt class="sig sig-object py" id="pygama.raw.orca.orca_digitizers.SIS3316ORCADecoder.get_decoded_values">
 <span class="sig-name descname"><span class="pre">get_decoded_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.orca.orca_digitizers.SIS3316ORCADecoder.get_decoded_values" title="Permalink to this definition"></a></dt>
 <dd><p>Get decoded values (optionally for a given key, typically a channel).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Must overload for your decoder if it has key-specific decoded
-values. Must also implement <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">None</span></code> returns a &quot;default&quot;
-<code class="docutils literal notranslate"><span class="pre">decoded_values</span></code>. Otherwise, just returns
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">self.decoded_values</span></code>, which should be defined in the
-constructor.</p>
-</div>
+<p class="rubric">Notes</p>
+<p>Must overload for your decoder if it has key-specific decoded values.
+Must also implement <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">None</span></code> returns a &quot;default&quot;
+<cite>decoded_values</cite>. Otherwise, just returns <code class="xref py py-attr docutils literal notranslate"><span class="pre">self.decoded_values</span></code>,
+which should be defined in the constructor.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -345,14 +336,11 @@ flattened before populating the lh5 table.</p>
 <dt class="sig sig-object py" id="pygama.raw.orca.orca_flashcam.ORFlashCamADCWaveformDecoder.get_decoded_values">
 <span class="sig-name descname"><span class="pre">get_decoded_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.orca.orca_flashcam.ORFlashCamADCWaveformDecoder.get_decoded_values" title="Permalink to this definition"></a></dt>
 <dd><p>Get decoded values (optionally for a given key, typically a channel).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Must overload for your decoder if it has key-specific decoded
-values. Must also implement <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">None</span></code> returns a &quot;default&quot;
-<code class="docutils literal notranslate"><span class="pre">decoded_values</span></code>. Otherwise, just returns
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">self.decoded_values</span></code>, which should be defined in the
-constructor.</p>
-</div>
+<p class="rubric">Notes</p>
+<p>Must overload for your decoder if it has key-specific decoded values.
+Must also implement <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">None</span></code> returns a &quot;default&quot;
+<cite>decoded_values</cite>. Otherwise, just returns <code class="xref py py-attr docutils literal notranslate"><span class="pre">self.decoded_values</span></code>,
+which should be defined in the constructor.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -360,7 +348,7 @@ constructor.</p>
 <span class="sig-name descname"><span class="pre">get_key_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.orca.orca_flashcam.ORFlashCamADCWaveformDecoder.get_key_list" title="Permalink to this definition"></a></dt>
 <dd><p>Overload with list of keys for this decoder, e.g. <code class="docutils literal notranslate"><span class="pre">return</span>
 <span class="pre">range(n_channels)</span></code>.  The default version works for decoders with
-single / no keys</p>
+single / no keys.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -391,14 +379,11 @@ single / no keys</p>
 <dt class="sig sig-object py" id="pygama.raw.orca.orca_flashcam.ORFlashCamListenerConfigDecoder.get_decoded_values">
 <span class="sig-name descname"><span class="pre">get_decoded_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.orca.orca_flashcam.ORFlashCamListenerConfigDecoder.get_decoded_values" title="Permalink to this definition"></a></dt>
 <dd><p>Get decoded values (optionally for a given key, typically a channel).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Must overload for your decoder if it has key-specific decoded
-values. Must also implement <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">None</span></code> returns a &quot;default&quot;
-<code class="docutils literal notranslate"><span class="pre">decoded_values</span></code>. Otherwise, just returns
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">self.decoded_values</span></code>, which should be defined in the
-constructor.</p>
-</div>
+<p class="rubric">Notes</p>
+<p>Must overload for your decoder if it has key-specific decoded values.
+Must also implement <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">None</span></code> returns a &quot;default&quot;
+<cite>decoded_values</cite>. Otherwise, just returns <code class="xref py py-attr docutils literal notranslate"><span class="pre">self.decoded_values</span></code>,
+which should be defined in the constructor.</p>
 </dd></dl>
 
 </dd></dl>
@@ -492,7 +477,7 @@ readout info for that Orca unique id number.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.raw.orca.orca_header_decoder.OrcaHeaderDecoder.buffer_is_full">
 <span class="sig-name descname"><span class="pre">buffer_is_full</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.orca.orca_header_decoder.OrcaHeaderDecoder.buffer_is_full" title="Permalink to this definition"></a></dt>
-<dd><p>Returns whether the buffer is too full to read in another packet</p>
+<dd><p>Returns whether the buffer is too full to read in another packet.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -505,24 +490,24 @@ readout info for that Orca unique id number.</p>
 <span class="sig-name descname"><span class="pre">make_lgdo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.orca.orca_header_decoder.OrcaHeaderDecoder.make_lgdo" title="Permalink to this definition"></a></dt>
 <dd><p>Make an LGDO for this <code class="xref py py-class docutils literal notranslate"><span class="pre">DataDecoder</span></code> to fill.</p>
 <p>This default version of this function allocates a
-<a class="reference internal" href="pygama.lgdo.html#pygama.lgdo.table.Table" title="pygama.lgdo.table.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a> using the <code class="docutils literal notranslate"><span class="pre">decoded_values</span></code> for key. If a
+<a class="reference internal" href="pygama.lgdo.html#pygama.lgdo.table.Table" title="pygama.lgdo.table.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a> using the <cite>decoded_values</cite> for key. If a
 different type of LGDO object is required for this decoder, overload
 this function.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> or </em><em>else</em>) -- used to initialize the LGDO for a particular key (e.g.  to have
+<li><p><strong>key</strong> -- used to initialize the LGDO for a particular <cite>key</cite> (e.g.  to have
 different trace lengths for different channels of a piece of
 hardware). Leave as <code class="docutils literal notranslate"><span class="pre">None</span></code> if such specialization is not
-necessary</p></li>
-<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- the size to be allocated for the LGDO, if applicable</p></li>
+necessary.</p></li>
+<li><p><strong>size</strong> -- the size to be allocated for the LGDO, if applicable.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>data_obj</strong> -- the newly allocated LGDO</p>
+<dd class="field-even"><p>the newly allocated LGDO.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>lgdo</p>
+<dd class="field-odd"><p>data_obj</p>
 </dd>
 </dl>
 </dd></dl>
@@ -637,10 +622,8 @@ e.g: d[5] = ['P12345A','P12346B','', ... 'B8765']</p>
 <dt class="sig sig-object py" id="pygama.raw.orca.orca_streamer.OrcaStreamer.get_decoder_list">
 <span class="sig-name descname"><span class="pre">get_decoder_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pygama.raw.orca.orca_streamer.OrcaStreamer.get_decoder_list" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a list of decoder objects for this data stream.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="rubric">Notes</p>
 <p>Needs to be overloaded. Gets called during <a class="reference internal" href="#pygama.raw.orca.orca_streamer.OrcaStreamer.open_stream" title="pygama.raw.orca.orca_streamer.OrcaStreamer.open_stream"><code class="xref py py-meth docutils literal notranslate"><span class="pre">open_stream()</span></code></a>.</p>
-</div>
 </dd></dl>
 
 <dl class="py method">
