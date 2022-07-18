@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="python" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pygama.math.functions package &mdash; pygama  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pygama.pargen package" href="pygama.pargen.html" />
+    <link rel="prev" title="pygama.math package" href="pygama.math.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> pygama
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manuals/index.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials (Jupyter notebooks)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Package API reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pygama.html">pygama package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="pygama.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="pygama.dsp.html">pygama.dsp package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pygama.evt.html">pygama.evt package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pygama.flow.html">pygama.flow package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pygama.hit.html">pygama.hit package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pygama.lgdo.html">pygama.lgdo package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="pygama.math.html">pygama.math package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pygama.pargen.html">pygama.pargen package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pygama.raw.html">pygama.raw package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pygama.vis.html">pygama.vis package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pygama.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygama.html#module-pygama.cli">pygama.cli module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer.html">Developer's guide</a></li>
+</ul>
+
+    <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+      <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: refactor
+        <span class="fa fa-caret-down"></span>
+      </span>
+      <div class="rst-other-versions">
+        <dl>
+          <dt>Branches</dt>
+          <dd><a href="pygama.math.functions.html">refactor</a></dd>
+          <dd><a href="../../main/index.html">main</a></dd>
+          <dd><a href="../../releases/v0.9/index.html">releases/v0.9</a></dd>
+        </dl>
+      </div>
+    </div>
+  
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pygama</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">pygama</a> &raquo;</li>
+          <li><a href="pygama.html">pygama package</a> &raquo;</li>
+          <li><a href="pygama.math.html">pygama.math package</a> &raquo;</li>
+      <li>pygama.math.functions package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/pygama.math.functions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pygama.math.functions">
+<span id="pygama-math-functions-package"></span><h1>pygama.math.functions package<a class="headerlink" href="#module-pygama.math.functions" title="Permalink to this heading"></a></h1>
+<p>Package documentation</p>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-pygama.math.functions.crystall_ball">
+<span id="pygama-math-functions-crystall-ball-module"></span><h2>pygama.math.functions.crystall_ball module<a class="headerlink" href="#module-pygama.math.functions.crystall_ball" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.crystall_ball.nb_xtalball_cdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.crystall_ball.</span></span><span class="sig-name descname"><span class="pre">nb_xtalball_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></span><a class="headerlink" href="#pygama.math.functions.crystall_ball.nb_xtalball_cdf" title="Permalink to this definition"></a></dt>
+<dd><p>CDF for power-law tail plus gaussian.
+As a Numba vectorized function, it runs slightly faster than
+'out of the box' functions.
+It computes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}y = \frac{x-\mu}{\sigma} \\
+PDF = A \times cdf(y, \beta, m)\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>TODO:: potentially replace by a guvectorized factory function so that
+the normalization isn't computed every time</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- The input data</p></li>
+<li><p><strong>beta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The point where the Cdf changes from power-law to Gaussian</p></li>
+<li><p><strong>m</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The power of the power-law tail</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The amount to shift the distribution</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The amount to scale the distribution</p></li>
+<li><p><strong>A</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- An overall scale factor</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>y</strong> -- The value at x given the parameters</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.crystall_ball.nb_xtalball_pdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.crystall_ball.</span></span><span class="sig-name descname"><span class="pre">nb_xtalball_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></span><a class="headerlink" href="#pygama.math.functions.crystall_ball.nb_xtalball_pdf" title="Permalink to this definition"></a></dt>
+<dd><p>PDF of a power-law tail plus gaussian.
+As a Numba vectorized function, it runs slightly faster than
+'out of the box' functions.
+It computes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}y = \frac{x - \mu}{\sigma} \\
+PDF = A \frac{pdf(y, \beta, m)}{\sigma}\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Later: potentially replace by a guvectorized factory function so that
+the normalization isn't computed every time</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- The input data</p></li>
+<li><p><strong>beta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The point where the pdf changes from power-law to Gaussian</p></li>
+<li><p><strong>m</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The power of the power-law tail</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The amount to shift the distribution</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The amount to scale the distribution</p></li>
+<li><p><strong>A</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- An overall scale factor</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>y</strong> -- The value at x given the parameters</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pygama.math.functions.error_function">
+<span id="pygama-math-functions-error-function-module"></span><h2>pygama.math.functions.error_function module<a class="headerlink" href="#module-pygama.math.functions.error_function" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.error_function.nb_erf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.error_function.</span></span><span class="sig-name descname"><span class="pre">nb_erf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></span><a class="headerlink" href="#pygama.math.functions.error_function.nb_erf" title="Permalink to this definition"></a></dt>
+<dd><p>Numba version of error function.
+Vectorization is necessary here for the math.erf
+This runs faster than numpy vectorized and the
+out-of-the-box math.erf</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em> or </em><em>array-like</em>) -- The input data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>math.erf(x)</strong> -- Error function acting on the input</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)">float</a> or array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.error_function.nb_erfc">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.error_function.</span></span><span class="sig-name descname"><span class="pre">nb_erfc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></span></span><a class="headerlink" href="#pygama.math.functions.error_function.nb_erfc" title="Permalink to this definition"></a></dt>
+<dd><p>Numba version of complementary error function
+Vectorization is necessary here for the math.erfc
+This runs faster than numpy vectorized and the
+out-of-the-box math.erfc</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em> or </em><em>array-like</em>) -- The input data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>math.erfc(x)</strong> -- Complementary error function acting on the input</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)">float</a> or array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pygama.math.functions.gauss">
+<span id="pygama-math-functions-gauss-module"></span><h2>pygama.math.functions.gauss module<a class="headerlink" href="#module-pygama.math.functions.gauss" title="Permalink to this heading"></a></h2>
+<p>Gaussian distributions for pygama</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss.nb_gauss">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss.</span></span><span class="sig-name descname"><span class="pre">nb_gauss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss.nb_gauss" title="Permalink to this definition"></a></dt>
+<dd><p>Gaussian, unnormalised for use in building pdfs
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss.nb_gauss_amp">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_amp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss.nb_gauss_amp" title="Permalink to this definition"></a></dt>
+<dd><p>Gaussian with height as a parameter for fwhm etc.
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>a</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The amplitude of the Gaussian</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss.nb_gauss_cdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss.nb_gauss_cdf" title="Permalink to this definition"></a></dt>
+<dd><p>gaussian cdf, w/ args: mu, sigma.
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- The input data</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss.nb_gauss_norm">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss.nb_gauss_norm" title="Permalink to this definition"></a></dt>
+<dd><p>Normalised Gaussian, w/ args: mu, sigma.
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- The input data</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss.nb_gauss_pdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss.nb_gauss_pdf" title="Permalink to this definition"></a></dt>
+<dd><p>Basic Gaussian pdf args; mu, sigma, n_sig (number of signal events)
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- The input data</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>n_sig</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The number of counts in the signal</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pygama.math.functions.gauss_on_background">
+<span id="pygama-math-functions-gauss-on-background-module"></span><h2>pygama.math.functions.gauss_on_background module<a class="headerlink" href="#module-pygama.math.functions.gauss_on_background" title="Permalink to this heading"></a></h2>
+<p>Gaussian distributions on linear and uniform backgrounds for pygama</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss_on_background.nb_gauss_linear">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss_on_background.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_linear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bkg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss_on_background.nb_gauss_linear" title="Permalink to this definition"></a></dt>
+<dd><p>Gaussian signal on top of a linear background function
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>n_sig</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Number of counts in the signal</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>n_bkg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The number of counts in the background</p></li>
+<li><p><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The y-intercept of the linear background</p></li>
+<li><p><strong>m</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Slope of the linear background</p></li>
+<li><p><strong>components</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- If true, returns the signal and background components separately</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss_on_background.nb_gauss_uniform">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss_on_background.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_uniform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bkg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss_on_background.nb_gauss_uniform" title="Permalink to this definition"></a></dt>
+<dd><p>A Gaussian signal on a uniform background
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>n_sig</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Number of counts in the signal</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>n_bkg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The number of counts in the background</p></li>
+<li><p><strong>components</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- If true, returns the signal and background components separately</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pygama.math.functions.gauss_step">
+<span id="pygama-math-functions-gauss-step-module"></span><h2>pygama.math.functions.gauss_step module<a class="headerlink" href="#module-pygama.math.functions.gauss_step" title="Permalink to this heading"></a></h2>
+<p>Gaussian distributions with a step function for pygama</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss_step.nb_gauss_step">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss_step.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bkg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hstep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss_step.nb_gauss_step" title="Permalink to this definition"></a></dt>
+<dd><p>Pdf for Gaussian on step background for Compton spectrum, returns also the total number of events for extended unbinned fits
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>n_sig</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Number of counts in the signal</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>n_bkg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The number of counts in the background</p></li>
+<li><p><strong>hstep</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The height of the step function background</p></li>
+<li><p><strong>lower_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Lower bound of the step function</p></li>
+<li><p><strong>upper_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Upper bound of the step function</p></li>
+<li><p><strong>components</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- If true, returns the signal and background components separately</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss_step.nb_gauss_step_cdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss_step.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_step_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bkg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hstep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss_step.nb_gauss_step_cdf" title="Permalink to this definition"></a></dt>
+<dd><p>CDF for Gaussian on step background
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>n_sig</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Number of counts in the signal</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>n_bkg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The number of counts in the background</p></li>
+<li><p><strong>hstep</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The height of the step function background</p></li>
+<li><p><strong>lower_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Lower bound of the step function</p></li>
+<li><p><strong>upper_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Upper bound of the step function</p></li>
+<li><p><strong>components</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- If true, returns the signal and background components separately</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss_step.nb_gauss_step_pdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss_step.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_step_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bkg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hstep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss_step.nb_gauss_step_pdf" title="Permalink to this definition"></a></dt>
+<dd><p>PDF for Gaussian on top of a step background
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>n_sig</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Number of counts in the signal</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>n_bkg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The number of counts in the background</p></li>
+<li><p><strong>hstep</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The height of the step function background</p></li>
+<li><p><strong>lower_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Lower bound of the step function</p></li>
+<li><p><strong>upper_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Upper bound of the step function</p></li>
+<li><p><strong>components</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- If true, returns the signal and background components separately</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pygama.math.functions.gauss_with_tail">
+<span id="pygama-math-functions-gauss-with-tail-module"></span><h2>pygama.math.functions.gauss_with_tail module<a class="headerlink" href="#module-pygama.math.functions.gauss_with_tail" title="Permalink to this heading"></a></h2>
+<p>Gaussian distributions with tails for pygama</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss_with_tail.nb_exgauss">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss_with_tail.</span></span><span class="sig-name descname"><span class="pre">nb_exgauss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss_with_tail.nb_exgauss" title="Permalink to this definition"></a></dt>
+<dd><p>A gaussian tail function template
+Can be used as a component of other fit functions w/args mu,sigma,tau
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>tau</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The characteristic scale of the Gaussian tail</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss_with_tail.nb_gauss_tail_approx">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss_with_tail.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_tail_approx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss_with_tail.nb_gauss_tail_approx" title="Permalink to this definition"></a></dt>
+<dd><p>Approximate form of gaussian tail
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>tau</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The characteristic scale of the Gaussian tail</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss_with_tail.nb_gauss_tail_cdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss_with_tail.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_tail_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss_with_tail.nb_gauss_tail_cdf" title="Permalink to this definition"></a></dt>
+<dd><p>CDF for gaussian tail
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>tau</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The characteristic scale of the Gaussian tail</p></li>
+<li><p><strong>lower_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Lower bound of the Gaussian with tail</p></li>
+<li><p><strong>upper_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Upper bound of the Gaussian with tail</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss_with_tail.nb_gauss_tail_exact">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss_with_tail.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_tail_exact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss_with_tail.nb_gauss_tail_exact" title="Permalink to this definition"></a></dt>
+<dd><p>Exact form of gaussian tail
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>tau</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The characteristic scale of the Gaussian tail</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss_with_tail.nb_gauss_tail_integral">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss_with_tail.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_tail_integral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss_with_tail.nb_gauss_tail_integral" title="Permalink to this definition"></a></dt>
+<dd><p>Integral for gaussian tail
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>tau</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The characteristic scale of the Gaussian tail</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss_with_tail.nb_gauss_tail_norm">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss_with_tail.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_tail_norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss_with_tail.nb_gauss_tail_norm" title="Permalink to this definition"></a></dt>
+<dd><p>Normalised gauss tail.
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>tau</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The characteristic scale of the Gaussian tail</p></li>
+<li><p><strong>lower_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Lower bound of the Gaussian with tail</p></li>
+<li><p><strong>upper_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Upper bound of the Gaussian with tail</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This is only needed when the fitting range
+does not include the whole tail</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss_with_tail.nb_gauss_with_tail_cdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss_with_tail.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_with_tail_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">htail</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss_with_tail.nb_gauss_with_tail_cdf" title="Permalink to this definition"></a></dt>
+<dd><p>CDF for gaussian with tail
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>htail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The height of the tail</p></li>
+<li><p><strong>tau</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The characteristic scale of the Gaussian tail</p></li>
+<li><p><strong>components</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- If true, returns the signal and background components separately</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.gauss_with_tail.nb_gauss_with_tail_pdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.gauss_with_tail.</span></span><span class="sig-name descname"><span class="pre">nb_gauss_with_tail_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">htail</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.gauss_with_tail.nb_gauss_with_tail_pdf" title="Permalink to this definition"></a></dt>
+<dd><p>PDF for gaussian with tail
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>htail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The height of the tail</p></li>
+<li><p><strong>tau</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The characteristic scale of the Gaussian tail</p></li>
+<li><p><strong>components</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- If true, returns the signal and background components separately</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pygama.math.functions.hpge_peak">
+<span id="pygama-math-functions-hpge-peak-module"></span><h2>pygama.math.functions.hpge_peak module<a class="headerlink" href="#module-pygama.math.functions.hpge_peak" title="Permalink to this heading"></a></h2>
+<p>Radford Ge peak shape distributions for pygama</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.hpge_peak.nb_extended_hpge_peak_pdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.hpge_peak.</span></span><span class="sig-name descname"><span class="pre">nb_extended_hpge_peak_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">htail</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bkg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hstep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.hpge_peak.nb_extended_hpge_peak_pdf" title="Permalink to this definition"></a></dt>
+<dd><p>PDF for gaussian with tail signal and step background, also returns number of events
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>n_sig</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Number of counts in the signal</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>htail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The height of the Gaussian tail</p></li>
+<li><p><strong>tau</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The characteristic scale of the Gaussian tail</p></li>
+<li><p><strong>n_bkg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The number of counts in the background</p></li>
+<li><p><strong>hstep</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The height of the step function background</p></li>
+<li><p><strong>lower_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Lower bound of the step function</p></li>
+<li><p><strong>upper_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Upper bound of the step function</p></li>
+<li><p><strong>components</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- If true, returns the signal and background components separately</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.hpge_peak.nb_hpge_peak_cdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.hpge_peak.</span></span><span class="sig-name descname"><span class="pre">nb_hpge_peak_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">htail</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bkg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hstep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.hpge_peak.nb_hpge_peak_cdf" title="Permalink to this definition"></a></dt>
+<dd><p>Cdf for gaussian with tail signal and step background
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>n_sig</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Number of counts in the signal</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>htail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The height of the Gaussian tail</p></li>
+<li><p><strong>tau</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The characteristic scale of the Gaussian tail</p></li>
+<li><p><strong>n_bkg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The number of counts in the background</p></li>
+<li><p><strong>hstep</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The height of the step function background</p></li>
+<li><p><strong>lower_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Lower bound of the step function</p></li>
+<li><p><strong>upper_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Upper bound of the step function</p></li>
+<li><p><strong>components</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- If true, returns the signal and background components separately</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.hpge_peak.nb_hpge_peak_pdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.hpge_peak.</span></span><span class="sig-name descname"><span class="pre">nb_hpge_peak_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">htail</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bkg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hstep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.hpge_peak.nb_hpge_peak_pdf" title="Permalink to this definition"></a></dt>
+<dd><p>HPGe peak shape PDF consists of a gaussian with tail signal
+on a step background.
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>n_sig</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Number of counts in the signal</p></li>
+<li><p><strong>mu</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The centroid of the Gaussian</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The standard deviation of the Gaussian</p></li>
+<li><p><strong>htail</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The height of the Gaussian tail</p></li>
+<li><p><strong>tau</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The characteristic scale of the Gaussian tail</p></li>
+<li><p><strong>n_bkg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The number of counts in the background</p></li>
+<li><p><strong>hstep</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- The height of the step function background</p></li>
+<li><p><strong>lower_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Lower bound of the step function</p></li>
+<li><p><strong>upper_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- Upper bound of the step function</p></li>
+<li><p><strong>components</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- If true, returns the signal and background components separately</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pygama.math.functions.polynomial">
+<span id="pygama-math-functions-polynomial-module"></span><h2>pygama.math.functions.polynomial module<a class="headerlink" href="#module-pygama.math.functions.polynomial" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.polynomial.nb_poly">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.polynomial.</span></span><span class="sig-name descname"><span class="pre">nb_poly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pars</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.polynomial.nb_poly" title="Permalink to this definition"></a></dt>
+<dd><p>A polynomial function with pars following the polyfit convention.
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>array-like</em>) -- Input data</p></li>
+<li><p><strong>pars</strong> (<em>array-like</em>) -- Coefficients of the polynomial, in polyfit convention</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pygama.math.functions.step">
+<span id="pygama-math-functions-step-module"></span><h2>pygama.math.functions.step module<a class="headerlink" href="#module-pygama.math.functions.step" title="Permalink to this heading"></a></h2>
+<p>Step distributions for pygama</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.step.nb_step_cdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.step.</span></span><span class="sig-name descname"><span class="pre">nb_step_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hstep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.step.nb_step_cdf" title="Permalink to this definition"></a></dt>
+<dd><p>CDF for step function w/args mu, sigma, hstep
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.step.nb_step_int">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.step.</span></span><span class="sig-name descname"><span class="pre">nb_step_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hstep</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.step.nb_step_int" title="Permalink to this definition"></a></dt>
+<dd><p>Integral of step function w/args mu, sigma, hstep
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.step.nb_step_pdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.step.</span></span><span class="sig-name descname"><span class="pre">nb_step_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hstep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.step.nb_step_pdf" title="Permalink to this definition"></a></dt>
+<dd><p>Normalised step function w/args mu, sigma, hstep
+Can be used as a component of other fit functions
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.step.nb_unnorm_step_pdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.step.</span></span><span class="sig-name descname"><span class="pre">nb_unnorm_step_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hstep</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.step.nb_unnorm_step_pdf" title="Permalink to this definition"></a></dt>
+<dd><p>Unnormalised step function for use in pdfs
+As a Numba JIT function, it runs slightly faster than
+'out of the box' functions.</p>
+</dd></dl>
+
+</section>
+<section id="module-pygama.math.functions.triple_gauss">
+<span id="pygama-math-functions-triple-gauss-module"></span><h2>pygama.math.functions.triple_gauss module<a class="headerlink" href="#module-pygama.math.functions.triple_gauss" title="Permalink to this heading"></a></h2>
+<p>Double Gaussian distributions with different backgrounds for pygama</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.triple_gauss.nb_triple_gauss_double_step">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.triple_gauss.</span></span><span class="sig-name descname"><span class="pre">nb_triple_gauss_double_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bkg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hstep1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bkg2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hstep2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.triple_gauss.nb_triple_gauss_double_step" title="Permalink to this definition"></a></dt>
+<dd><p>Consists of</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>three extended gaussian peaks (two lines + one bkg line in between)</p></li>
+<li><p>two steps (for the two lines)</p></li>
+<li><p>two tails (for the two lines)</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pygama.math.functions.triple_gauss.nb_triple_gauss_double_step_pdf">
+<span class="sig-prename descclassname"><span class="pre">pygama.math.functions.triple_gauss.</span></span><span class="sig-name descname"><span class="pre">nb_triple_gauss_double_step_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_sig3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bkg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hstep1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bkg2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hstep2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygama.math.functions.triple_gauss.nb_triple_gauss_double_step_pdf" title="Permalink to this definition"></a></dt>
+<dd><p>Consists of</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>three gaussian peaks (two lines + one bkg line in between)</p></li>
+<li><p>two steps (for the two lines)</p></li>
+<li><p>two tails (for the two lines)</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pygama.math.html" class="btn btn-neutral float-left" title="pygama.math package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pygama.pargen.html" class="btn btn-neutral float-right" title="pygama.pargen package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, the LEGEND Collaboration.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

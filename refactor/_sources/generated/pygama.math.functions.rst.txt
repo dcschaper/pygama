@@ -1,0 +1,101 @@
+pygama.math.functions package
+=============================
+
+.. automodule:: pygama.math.functions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+Submodules
+----------
+
+pygama.math.functions.crystall\_ball module
+-------------------------------------------
+
+.. automodule:: pygama.math.functions.crystall_ball
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+pygama.math.functions.error\_function module
+--------------------------------------------
+
+.. automodule:: pygama.math.functions.error_function
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+pygama.math.functions.gauss module
+----------------------------------
+
+.. automodule:: pygama.math.functions.gauss
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+pygama.math.functions.gauss\_on\_background module
+--------------------------------------------------
+
+.. automodule:: pygama.math.functions.gauss_on_background
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+pygama.math.functions.gauss\_step module
+----------------------------------------
+
+.. automodule:: pygama.math.functions.gauss_step
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+pygama.math.functions.gauss\_with\_tail module
+----------------------------------------------
+
+.. automodule:: pygama.math.functions.gauss_with_tail
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+pygama.math.functions.hpge\_peak module
+---------------------------------------
+
+.. automodule:: pygama.math.functions.hpge_peak
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+pygama.math.functions.polynomial module
+---------------------------------------
+
+.. automodule:: pygama.math.functions.polynomial
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+pygama.math.functions.step module
+---------------------------------
+
+.. automodule:: pygama.math.functions.step
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+pygama.math.functions.triple\_gauss module
+------------------------------------------
+
+.. automodule:: pygama.math.functions.triple_gauss
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
