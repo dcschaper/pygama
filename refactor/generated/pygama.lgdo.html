@@ -79,8 +79,8 @@
       <div class="rst-other-versions">
         <dl>
           <dt>Branches</dt>
-          <dd><a href="pygama.lgdo.html">refactor</a></dd>
           <dd><a href="../../main/index.html">main</a></dd>
+          <dd><a href="pygama.lgdo.html">refactor</a></dd>
           <dd><a href="../../releases/v0.9/index.html">releases/v0.9</a></dd>
         </dl>
       </div>
@@ -169,18 +169,18 @@ in <a class="reference internal" href="#pygama.lgdo.table.Table" title="pygama.l
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>nda</strong> (<em>np.ndarray</em>) -- An <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.23)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> to be used for this object's internal
+<li><p><strong>nda</strong> -- An <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.23)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> to be used for this object's internal
 array. Note: the array is used directly, not copied. If not
 supplied, internal memory is newly allocated based on the shape and
 dtype arguments.</p></li>
-<li><p><strong>shape</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><em>...</em><em>]</em>) -- A numpy-format shape specification for shape of the internal
+<li><p><strong>shape</strong> -- A numpy-format shape specification for shape of the internal
 ndarray. Required if <cite>nda</cite> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, otherwise unused.</p></li>
-<li><p><strong>dtype</strong> (<em>np.dtype</em>) -- Specifies the type of the data in the array. Required if <cite>nda</cite> is
+<li><p><strong>dtype</strong> -- Specifies the type of the data in the array. Required if <cite>nda</cite> is
 <code class="docutils literal notranslate"><span class="pre">None</span></code>, otherwise unused.</p></li>
-<li><p><strong>fill_val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- If <code class="docutils literal notranslate"><span class="pre">None</span></code>, memory is allocated without initialization. Otherwise,
+<li><p><strong>fill_val</strong> -- If <code class="docutils literal notranslate"><span class="pre">None</span></code>, memory is allocated without initialization. Otherwise,
 the array is allocated with all elements set to the corresponding
 fill value. If <cite>nda</cite> is not <code class="docutils literal notranslate"><span class="pre">None</span></code>, this parameter is ignored.</p></li>
-<li><p><strong>attrs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) -- A set of user attributes to be carried along with this LGDO.</p></li>
+<li><p><strong>attrs</strong> -- A set of user attributes to be carried along with this LGDO.</p></li>
 </ul>
 </dd>
 </dl>
@@ -188,30 +188,18 @@ fill value. If <cite>nda</cite> is not <code class="docutils literal notranslate
 <dt class="sig sig-object py" id="pygama.lgdo.array.Array.datatype_name">
 <span class="sig-name descname"><span class="pre">datatype_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pygama.lgdo.array.Array.datatype_name" title="Permalink to this definition"></a></dt>
 <dd><p>The name for this LGDO's datatype attribute.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.array.Array.form_datatype">
 <span class="sig-name descname"><span class="pre">form_datatype</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pygama.lgdo.array.Array.form_datatype" title="Permalink to this definition"></a></dt>
 <dd><p>Return this LGDO's datatype attribute string.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.array.Array.resize">
 <span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pygama.lgdo.array.Array.resize" title="Permalink to this definition"></a></dt>
 <dd><p>Resize the array to <cite>new_size</cite>.</p>
-<dl class="field-list simple">
-</dl>
 </dd></dl>
 
 </dd></dl>
@@ -231,19 +219,19 @@ to application. Canonical example: array of same-length waveforms.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>dims</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><em>...</em><em>]</em>) -- specifies the dimensions required for building the
+<li><p><strong>dims</strong> -- specifies the dimensions required for building the
 <a class="reference internal" href="#pygama.lgdo.arrayofequalsizedarrays.ArrayOfEqualSizedArrays" title="pygama.lgdo.arrayofequalsizedarrays.ArrayOfEqualSizedArrays"><code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayOfEqualSizedArrays</span></code></a>' <cite>datatype</cite> attribute.</p></li>
-<li><p><strong>nda</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.23)"><em>numpy.ndarray</em></a>) -- An ndarray to be used for this object's internal array. Note: the
+<li><p><strong>nda</strong> -- An ndarray to be used for this object's internal array. Note: the
 array is used directly, not copied. If not supplied, internal memory
 is newly allocated based on the shape and dtype arguments.</p></li>
-<li><p><strong>shape</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><em>...</em><em>]</em>) -- A numpy-format shape specification for shape of the internal
+<li><p><strong>shape</strong> -- A numpy-format shape specification for shape of the internal
 ndarray. Required if nda is None, otherwise unused.</p></li>
-<li><p><strong>dtype</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v1.23)"><em>numpy.dtype</em></a>) -- Specifies the type of the data in the array. Required if nda is
+<li><p><strong>dtype</strong> -- Specifies the type of the data in the array. Required if nda is
 None, otherwise unused.</p></li>
-<li><p><strong>fill_val</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- If <code class="docutils literal notranslate"><span class="pre">None</span></code>, memory is allocated without initialization. Otherwise,
+<li><p><strong>fill_val</strong> -- If <code class="docutils literal notranslate"><span class="pre">None</span></code>, memory is allocated without initialization. Otherwise,
 the array is allocated with all elements set to the corresponding
 fill value. If <cite>nda</cite> is not <code class="docutils literal notranslate"><span class="pre">None</span></code>, this parameter is ignored.</p></li>
-<li><p><strong>attrs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) -- A set of user attributes to be carried along with this LGDO.</p></li>
+<li><p><strong>attrs</strong> -- A set of user attributes to be carried along with this LGDO.</p></li>
 </ul>
 </dd>
 </dl>
@@ -258,22 +246,12 @@ fill value. If <cite>nda</cite> is not <code class="docutils literal notranslate
 <dt class="sig sig-object py" id="pygama.lgdo.arrayofequalsizedarrays.ArrayOfEqualSizedArrays.datatype_name">
 <span class="sig-name descname"><span class="pre">datatype_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pygama.lgdo.arrayofequalsizedarrays.ArrayOfEqualSizedArrays.datatype_name" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the name for this LGDO's datatype attribute.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.arrayofequalsizedarrays.ArrayOfEqualSizedArrays.form_datatype">
 <span class="sig-name descname"><span class="pre">form_datatype</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pygama.lgdo.arrayofequalsizedarrays.ArrayOfEqualSizedArrays.form_datatype" title="Permalink to this definition"></a></dt>
 <dd><p>Return this LGDO's datatype attribute string.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>
@@ -298,17 +276,10 @@ just an alias for <a class="reference internal" href="#pygama.lgdo.array.Array" 
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array"><code class="xref py py-class docutils literal notranslate"><span class="pre">Array</span></code></a></p>
 </div>
-<dl class="field-list simple">
-</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.fixedsizearray.FixedSizeArray.datatype_name">
 <span class="sig-name descname"><span class="pre">datatype_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pygama.lgdo.fixedsizearray.FixedSizeArray.datatype_name" title="Permalink to this definition"></a></dt>
 <dd><p>The name for this object's HDF5 datatype attribute.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>
@@ -324,16 +295,16 @@ just an alias for <a class="reference internal" href="#pygama.lgdo.array.Array" 
 <p>For use in LGDO datatype attributes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>obj</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><em>object</em></a>) -- if a <code class="docutils literal notranslate"><span class="pre">str</span></code>, will automatically return <code class="docutils literal notranslate"><span class="pre">string</span></code> if the object has
+<dd class="field-odd"><p><strong>obj</strong> -- if a <code class="docutils literal notranslate"><span class="pre">str</span></code>, will automatically return <code class="docutils literal notranslate"><span class="pre">string</span></code> if the object has
 a <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v1.23)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.dtype</span></code></a>, that will be used for determining the element
 type otherwise will attempt to case the type of the object to a
 <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v1.23)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.dtype</span></code></a>.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><em>element_type</em> -- A string stating the determined element type of the object.</p>
+<dd class="field-even"><p>A string stating the determined element type of the object.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
+<dd class="field-odd"><p>element_type</p>
 </dd>
 </dl>
 </dd></dl>
@@ -344,10 +315,10 @@ type otherwise will attempt to case the type of the object to a
 <dd><p>Parse datatype string and return type, dimensions and elements.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>datatype</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- a LGDO-formatted datatype string.</p>
+<dd class="field-odd"><p><strong>datatype</strong> -- a LGDO-formatted datatype string.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><em>element_type</em> -- the datatype name dims if not <code class="docutils literal notranslate"><span class="pre">None</span></code>, a tuple of dimensions for the
+<dd class="field-even"><p>the datatype name dims if not <code class="docutils literal notranslate"><span class="pre">None</span></code>, a tuple of dimensions for the
 LGDO. Note this is not the same as the NumPy shape of the underlying
 data object. See the LGDO specification for more information. Also see
 <a class="reference internal" href="#pygama.lgdo.arrayofequalsizedarrays.ArrayOfEqualSizedArrays" title="pygama.lgdo.arrayofequalsizedarrays.ArrayOfEqualSizedArrays"><code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayOfEqualSizedArrays</span></code></a> and
@@ -356,7 +327,7 @@ numeric objects, the element type for struct-like  objects, the list of
 fields in the struct.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)">int</a>, ...], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]]</p>
+<dd class="field-odd"><p>element_type</p>
 </dd>
 </dl>
 </dd></dl>
@@ -393,18 +364,18 @@ between reads, you will have to copy it somewhere!</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>lh5_files</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) -- file or files to read from. May include wildcards and environment
+<li><p><strong>lh5_files</strong> -- file or files to read from. May include wildcards and environment
 variables.</p></li>
-<li><p><strong>group</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- HDF5 group to read.</p></li>
-<li><p><strong>base_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- HDF5 path to prepend.</p></li>
-<li><p><strong>entry_list</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>] </em><em>| </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>]</em><em>]</em>) -- list of entry numbers to read. If a nested list is provided,
+<li><p><strong>group</strong> -- HDF5 group to read.</p></li>
+<li><p><strong>base_path</strong> -- HDF5 path to prepend.</p></li>
+<li><p><strong>entry_list</strong> -- list of entry numbers to read. If a nested list is provided,
 expect one top-level list for each file, containing a list of
 local entries. If a list of ints is provided, use global entries.</p></li>
-<li><p><strong>entry_mask</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>] </em><em>| </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>]</em><em>]</em>) -- mask of entries to read. If a list of arrays is provided, expect
+<li><p><strong>entry_mask</strong> -- mask of entries to read. If a list of arrays is provided, expect
 one for each file. Ignore if a selection list is provided.</p></li>
-<li><p><strong>field_mask</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>] </em><em>| </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>] </em><em>| </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) -- mask of which fields to read. See <a class="reference internal" href="#pygama.lgdo.lh5_store.LH5Store.read_object" title="pygama.lgdo.lh5_store.LH5Store.read_object"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LH5Store.read_object()</span></code></a> for
+<li><p><strong>field_mask</strong> -- mask of which fields to read. See <a class="reference internal" href="#pygama.lgdo.lh5_store.LH5Store.read_object" title="pygama.lgdo.lh5_store.LH5Store.read_object"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LH5Store.read_object()</span></code></a> for
 more details.</p></li>
-<li><p><strong>buffer_len</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- number of entries to read at a time while iterating through files.</p></li>
+<li><p><strong>buffer_len</strong> -- number of entries to read at a time while iterating through files.</p></li>
 </ul>
 </dd>
 </dl>
@@ -413,11 +384,6 @@ more details.</p></li>
 <span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><span class="pre">Union</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array"><span class="pre">pygama.lgdo.array.Array</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pygama.lgdo.scalar.Scalar" title="pygama.lgdo.scalar.Scalar"><span class="pre">pygama.lgdo.scalar.Scalar</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pygama.lgdo.struct.Struct" title="pygama.lgdo.struct.Struct"><span class="pre">pygama.lgdo.struct.Struct</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pygama.lgdo.vectorofvectors.VectorOfVectors" title="pygama.lgdo.vectorofvectors.VectorOfVectors"><span class="pre">pygama.lgdo.vectorofvectors.VectorOfVectors</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pygama.lgdo.lh5_store.LH5Iterator.read" title="Permalink to this definition"></a></dt>
 <dd><p>Read the next chunk of events, starting at entry. Return the
 LH5 buffer and number of rows read.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><em>Union</em></a>[<a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array">pygama.lgdo.array.Array</a>, <a class="reference internal" href="#pygama.lgdo.scalar.Scalar" title="pygama.lgdo.scalar.Scalar">pygama.lgdo.scalar.Scalar</a>, <a class="reference internal" href="#pygama.lgdo.struct.Struct" title="pygama.lgdo.struct.Struct">pygama.lgdo.struct.Struct</a>, <a class="reference internal" href="#pygama.lgdo.vectorofvectors.VectorOfVectors" title="pygama.lgdo.vectorofvectors.VectorOfVectors">pygama.lgdo.vectorofvectors.VectorOfVectors</a>], <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)">int</a>]</p>
-</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>
@@ -439,8 +405,8 @@ implemented by the class are <a class="reference internal" href="#pygama.lgdo.lh
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>base_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- directory path to prepend to LH5 files.</p></li>
-<li><p><strong>keep_open</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- whether to keep files open by storing the <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5py</span></code> objects as
+<li><p><strong>base_path</strong> -- directory path to prepend to LH5 files.</p></li>
+<li><p><strong>keep_open</strong> -- whether to keep files open by storing the <code class="xref py py-mod docutils literal notranslate"><span class="pre">h5py</span></code> objects as
 class attributes.</p></li>
 </ul>
 </dd>
@@ -450,11 +416,6 @@ class attributes.</p></li>
 <span class="sig-name descname"><span class="pre">get_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lh5_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.h5py.org/en/stable/high/file.html#h5py.File" title="(in h5py v3.7)"><span class="pre">h5py.File</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.h5py.org/en/stable/high/file.html#h5py.File" title="(in h5py v3.7)"><span class="pre">h5py.File</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">LGDO</span></span></span><a class="headerlink" href="#pygama.lgdo.lh5_store.LH5Store.get_buffer" title="Permalink to this definition"></a></dt>
 <dd><p>Returns an LH5 object appropriate for use as a pre-allocated buffer
 in a read loop. Sets size to <cite>size</cite> if object has a size.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>LGDO</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -464,12 +425,9 @@ in a read loop. Sets size to <cite>size</cite> if object has a size.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>lh5_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.h5py.org/en/stable/high/file.html#h5py.File" title="(in h5py v3.7)"><em>h5py.File</em></a>) -- LH5 file name.</p></li>
-<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- mode in which to open file. See <a class="reference external" href="https://docs.h5py.org/en/stable/high/file.html#h5py.File" title="(in h5py v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">h5py.File</span></code></a> documentation.</p></li>
+<li><p><strong>lh5_file</strong> -- LH5 file name.</p></li>
+<li><p><strong>mode</strong> -- mode in which to open file. See <a class="reference external" href="https://docs.h5py.org/en/stable/high/file.html#h5py.File" title="(in h5py v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">h5py.File</span></code></a> documentation.</p></li>
 </ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.h5py.org/en/stable/high/file.html#h5py.File" title="(in h5py v3.7)">h5py.File</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -482,15 +440,12 @@ new one. Can also set (or replace) group attributes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>group</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- name of the HDF5 group.</p></li>
-<li><p><strong>base_group</strong> (<a class="reference external" href="https://docs.h5py.org/en/stable/high/group.html#h5py.Group" title="(in h5py v3.7)"><em>h5py.Group</em></a>) -- HDF5 group to be used as a base.</p></li>
-<li><p><strong>grp_attrs</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><em>Any</em></a><em>]</em><em>]</em>) -- HDF5 group attributes.</p></li>
-<li><p><strong>overwrite</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- whether overwrite group attributes, ignored is <cite>grp_attrs</cite> is
+<li><p><strong>group</strong> -- name of the HDF5 group.</p></li>
+<li><p><strong>base_group</strong> -- HDF5 group to be used as a base.</p></li>
+<li><p><strong>grp_attrs</strong> -- HDF5 group attributes.</p></li>
+<li><p><strong>overwrite</strong> -- whether overwrite group attributes, ignored is <cite>grp_attrs</cite> is
 <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 </ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.h5py.org/en/stable/high/group.html#h5py.Group" title="(in h5py v3.7)">h5py.Group</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -501,11 +456,6 @@ new one. Can also set (or replace) group attributes.</p>
 <dd><p>Look up the number of rows in an Array-like object called <cite>name</cite> in
 <cite>lh5_file</cite>.</p>
 <p>Return <code class="docutils literal notranslate"><span class="pre">None</span></code> if it is a <a class="reference internal" href="#pygama.lgdo.scalar.Scalar" title="pygama.lgdo.scalar.Scalar"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scalar</span></code></a> or a <a class="reference internal" href="#pygama.lgdo.struct.Struct" title="pygama.lgdo.struct.Struct"><code class="xref py py-class docutils literal notranslate"><span class="pre">Struct</span></code></a>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)">int</a> | None</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -515,16 +465,16 @@ new one. Can also set (or replace) group attributes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- Name of the LH5 object to be read (including its group path).</p></li>
-<li><p><strong>lh5_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.h5py.org/en/stable/high/file.html#h5py.File" title="(in h5py v3.7)"><em>h5py.File</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.h5py.org/en/stable/high/file.html#h5py.File" title="(in h5py v3.7)"><em>h5py.File</em></a><em>]</em>) -- The file(s) containing the object to be read out. If a list of
+<li><p><strong>name</strong> -- Name of the LH5 object to be read (including its group path).</p></li>
+<li><p><strong>lh5_file</strong> -- The file(s) containing the object to be read out. If a list of
 files, array-like object data will be concatenated into the output
 object.</p></li>
-<li><p><strong>start_row</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- Starting entry for the object read (for array-like objects). For a
+<li><p><strong>start_row</strong> -- Starting entry for the object read (for array-like objects). For a
 list of files, only applies to the first file.</p></li>
-<li><p><strong>n_rows</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- The maximum number of rows to read (for array-like objects). The
+<li><p><strong>n_rows</strong> -- The maximum number of rows to read (for array-like objects). The
 actual number of rows read will be returned as one of the return
 values (see below).</p></li>
-<li><p><strong>idx</strong> (<em>np.ndarray</em><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><em>np.ndarray</em><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a><em>]</em>) -- For NumPy-style &quot;fancying indexing&quot; for the read. Used to read out
+<li><p><strong>idx</strong> -- For NumPy-style &quot;fancying indexing&quot; for the read. Used to read out
 rows that pass some selection criteria. Only selection along the first
 axis is supported, so tuple arguments must be one-tuples.  If <cite>n_rows</cite>
 is not false, <cite>idx</cite> will be truncated to <cite>n_rows</cite> before reading. To use
@@ -534,7 +484,7 @@ identical read). If used in conjunction with <cite>start_row</cite> and <cite>n_
 will be sliced to obey those constraints, where <cite>n_rows</cite> is
 interpreted as the (max) number of <em>selected</em> values (in <cite>idx</cite>) to be
 read out.</p></li>
-<li><p><strong>field_mask</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a><em>] </em><em>| </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>] </em><em>| </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) -- For tables and structs, determines which fields get written out.
+<li><p><strong>field_mask</strong> -- For tables and structs, determines which fields get written out.
 Only applies to immediate fields of the requested objects. If a dict
 is used, a default dict will be made with the default set to the
 opposite of the first element in the dict. This way if one specifies
@@ -542,22 +492,22 @@ a few fields at <code class="docutils literal notranslate"><span class="pre">Fal
 while if one specifies just a few fields as <code class="docutils literal notranslate"><span class="pre">True</span></code>, only those
 fields will be read out. If a list is provided, the listed fields
 will be set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, while the rest will default to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
-<li><p><strong>obj_buf</strong> (<em>LGDO</em>) -- Read directly into memory provided in <cite>obj_buf</cite>. Note: the buffer
+<li><p><strong>obj_buf</strong> -- Read directly into memory provided in <cite>obj_buf</cite>. Note: the buffer
 will be expanded to accommodate the data requested. To maintain the
 buffer length, send in <code class="docutils literal notranslate"><span class="pre">n_rows</span> <span class="pre">=</span> <span class="pre">len(obj_buf)</span></code>.</p></li>
-<li><p><strong>obj_buf_start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- Start location in <code class="docutils literal notranslate"><span class="pre">obj_buf</span></code> for read. For concatenating data to
+<li><p><strong>obj_buf_start</strong> -- Start location in <code class="docutils literal notranslate"><span class="pre">obj_buf</span></code> for read. For concatenating data to
 array-like objects.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><em>(object, n_rows_read)</em> -- <cite>object</cite> is the read-out object <cite>n_rows_read</cite> is the number of rows
+<dd class="field-even"><p><cite>object</cite> is the read-out object <cite>n_rows_read</cite> is the number of rows
 successfully read out. Essential for arrays when the amount of data
 is smaller than the object buffer.  For scalars and structs
 <cite>n_rows_read</cite> will be``1``. For tables it is redundant with
 <code class="docutils literal notranslate"><span class="pre">table.loc</span></code>.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)">tuple</a>[LGDO, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)">int</a>]</p>
+<dd class="field-odd"><p>(<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)">object</a>, n_rows_read)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -569,15 +519,15 @@ is smaller than the object buffer.  For scalars and structs
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>obj</strong> (<em>LGDO</em>) -- LH5 object. if object is array-like, writes <cite>n_rows</cite> starting from
+<li><p><strong>obj</strong> -- LH5 object. if object is array-like, writes <cite>n_rows</cite> starting from
 <cite>start_row</cite> in <cite>obj</cite>.</p></li>
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- name of the object in the output HDF5 file.</p></li>
-<li><p><strong>lh5_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.h5py.org/en/stable/high/file.html#h5py.File" title="(in h5py v3.7)"><em>h5py.File</em></a>) -- HDF5 file name or <a class="reference external" href="https://docs.h5py.org/en/stable/high/file.html#h5py.File" title="(in h5py v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">h5py.File</span></code></a> object.</p></li>
-<li><p><strong>group</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.h5py.org/en/stable/high/group.html#h5py.Group" title="(in h5py v3.7)"><em>h5py.Group</em></a>) -- HDF5 group name or <a class="reference external" href="https://docs.h5py.org/en/stable/high/group.html#h5py.Group" title="(in h5py v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">h5py.Group</span></code></a> object in which <cite>obj</cite> should
+<li><p><strong>name</strong> -- name of the object in the output HDF5 file.</p></li>
+<li><p><strong>lh5_file</strong> -- HDF5 file name or <a class="reference external" href="https://docs.h5py.org/en/stable/high/file.html#h5py.File" title="(in h5py v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">h5py.File</span></code></a> object.</p></li>
+<li><p><strong>group</strong> -- HDF5 group name or <a class="reference external" href="https://docs.h5py.org/en/stable/high/group.html#h5py.Group" title="(in h5py v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">h5py.Group</span></code></a> object in which <cite>obj</cite> should
 be written.</p></li>
-<li><p><strong>start_row</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- first row in <cite>obj</cite> to be written.</p></li>
-<li><p><strong>n_rows</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- number of rows in <cite>obj</cite> to be written.</p></li>
-<li><p><strong>wo_mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- <ul>
+<li><p><strong>start_row</strong> -- first row in <cite>obj</cite> to be written.</p></li>
+<li><p><strong>n_rows</strong> -- number of rows in <cite>obj</cite> to be written.</p></li>
+<li><p><strong>wo_mode</strong> -- <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">write_safe</span></code> or <code class="docutils literal notranslate"><span class="pre">w</span></code>: only proceed with writing if the
 object does not already exist in the file.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">append</span></code> or <code class="docutils literal notranslate"><span class="pre">a</span></code>: append along axis 0 (the first dimension)
@@ -590,7 +540,7 @@ end of array is the same as <code class="docutils literal notranslate"><span cla
 writing to it. <cite>write_start</cite> should be 0 (its ignored).</p></li>
 </ul>
 </p></li>
-<li><p><strong>write_start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- row in the output file (if already existing) to start overwriting
+<li><p><strong>write_start</strong> -- row in the output file (if already existing) to start overwriting
 from.</p></li>
 </ul>
 </dd>
@@ -612,12 +562,12 @@ values for each parameter.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><em>dataframe</em> -- contains columns for each parameter in <cite>par_list</cite>, and rows containing
+<dd class="field-odd"><p>contains columns for each parameter in <cite>par_list</cite>, and rows containing
 all data for the associated parameters concatenated over all files in
 <cite>f_list</cite>.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.4.3)">pandas.DataFrame</a></p>
+<dd class="field-even"><p>dataframe</p>
 </dd>
 </dl>
 </dd></dl>
@@ -631,20 +581,20 @@ group path, return a NumPy array with all values for each parameter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>f_list</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) -- A list of files. Can contain wildcards.</p></li>
-<li><p><strong>par_list</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em>) -- A list of parameters to read from each file.</p></li>
-<li><p><strong>lh5_group</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- group path within which to find the specified parameters.</p></li>
-<li><p><strong>idx_list</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.23)"><em>numpy.ndarray</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a><em>]</em><em>]</em>) -- for fancy-indexed reads. Must be one index array for each file in
+<li><p><strong>f_list</strong> -- A list of files. Can contain wildcards.</p></li>
+<li><p><strong>par_list</strong> -- A list of parameters to read from each file.</p></li>
+<li><p><strong>lh5_group</strong> -- group path within which to find the specified parameters.</p></li>
+<li><p><strong>idx_list</strong> -- for fancy-indexed reads. Must be one index array for each file in
 <cite>f_list</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><em>par_data</em> -- A dictionary of the parameter data keyed by the elements of <cite>par_list</cite>.
+<dd class="field-even"><p>A dictionary of the parameter data keyed by the elements of <cite>par_list</cite>.
 Each entry contains the data for the specified parameter concatenated
 over all files in <cite>f_list</cite>.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)">dict</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.23)">numpy.ndarray</a>]</p>
+<dd class="field-odd"><p>par_data</p>
 </dd>
 </dl>
 </dd></dl>
@@ -657,13 +607,10 @@ to <code class="docutils literal notranslate"><span class="pre">ls</span></code>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>lh5_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- name of file.</p></li>
-<li><p><strong>lh5_group</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- group to search. add a <code class="docutils literal notranslate"><span class="pre">/</span></code> to the end of the group name if you want to
+<li><p><strong>lh5_file</strong> -- name of file.</p></li>
+<li><p><strong>lh5_group</strong> -- group to search. add a <code class="docutils literal notranslate"><span class="pre">/</span></code> to the end of the group name if you want to
 list all objects inside that group.</p></li>
 </ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -680,8 +627,8 @@ list all objects inside that group.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a>) -- the value for this scalar.</p></li>
-<li><p><strong>attrs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) -- a set of user attributes to be carried along with this LGDO.</p></li>
+<li><p><strong>value</strong> -- the value for this scalar.</p></li>
+<li><p><strong>attrs</strong> -- a set of user attributes to be carried along with this LGDO.</p></li>
 </ul>
 </dd>
 </dl>
@@ -689,22 +636,12 @@ list all objects inside that group.</p></li>
 <dt class="sig sig-object py" id="pygama.lgdo.scalar.Scalar.datatype_name">
 <span class="sig-name descname"><span class="pre">datatype_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pygama.lgdo.scalar.Scalar.datatype_name" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the name for this LGDO's datatype attribute.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.scalar.Scalar.form_datatype">
 <span class="sig-name descname"><span class="pre">form_datatype</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pygama.lgdo.scalar.Scalar.form_datatype" title="Permalink to this definition"></a></dt>
 <dd><p>Return this LGDO's datatype attribute string.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>
@@ -724,47 +661,33 @@ datatype updated, or call <a class="reference internal" href="#pygama.lgdo.struc
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>obj_dict</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>LGDO</em><em> | </em><a class="reference internal" href="#pygama.lgdo.struct.Struct" title="pygama.lgdo.struct.Struct"><em>Struct</em></a><em>]</em>) -- instantiate this Struct using the supplied named LGDO's.  Note: no
+<li><p><strong>obj_dict</strong> -- instantiate this Struct using the supplied named LGDO's.  Note: no
 copy is performed, the objects are used directly.</p></li>
-<li><p><strong>attrs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) -- a set of user attributes to be carried along with this LGDO.</p></li>
+<li><p><strong>attrs</strong> -- a set of user attributes to be carried along with this LGDO.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.struct.Struct.add_field">
 <span class="sig-name descname"><span class="pre">add_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><span class="pre">Union</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pygama.lgdo.scalar.Scalar" title="pygama.lgdo.scalar.Scalar"><span class="pre">Scalar</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array"><span class="pre">Array</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pygama.lgdo.vectorofvectors.VectorOfVectors" title="pygama.lgdo.vectorofvectors.VectorOfVectors"><span class="pre">VectorOfVectors</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pygama.lgdo.struct.Struct" title="pygama.lgdo.struct.Struct"><span class="pre">Struct</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pygama.lgdo.struct.Struct.add_field" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.struct.Struct.datatype_name">
 <span class="sig-name descname"><span class="pre">datatype_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pygama.lgdo.struct.Struct.datatype_name" title="Permalink to this definition"></a></dt>
 <dd><p>The name for this LGDO's datatype attribute.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.struct.Struct.form_datatype">
 <span class="sig-name descname"><span class="pre">form_datatype</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pygama.lgdo.struct.Struct.form_datatype" title="Permalink to this definition"></a></dt>
 <dd><p>Return this LGDO's datatype attribute string.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.struct.Struct.update_datatype">
 <span class="sig-name descname"><span class="pre">update_datatype</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pygama.lgdo.struct.Struct.update_datatype" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -790,17 +713,17 @@ resize it before passing to data processing functions, as they will call
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- sets the number of rows in the table. <a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array"><code class="xref py py-class docutils literal notranslate"><span class="pre">Array</span></code></a>s in
+<li><p><strong>size</strong> -- sets the number of rows in the table. <a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array"><code class="xref py py-class docutils literal notranslate"><span class="pre">Array</span></code></a>s in
 <cite>col_dict will be resized to match size if both are not ``None`</cite>.
 If <cite>size</cite> is left as <code class="docutils literal notranslate"><span class="pre">None</span></code>, the number of table rows is
 determined from the length of the first array in <cite>col_dict</cite>. If
 neither is provided, a default length of 1024 is used.</p></li>
-<li><p><strong>col_dict</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>LGDO</em><em>]</em>) -- instantiate this table using the supplied named array-like LGDO's.
+<li><p><strong>col_dict</strong> -- instantiate this table using the supplied named array-like LGDO's.
 Note 1: no copy is performed, the objects are used directly.
 Note 2: if <cite>size</cite> is not <code class="docutils literal notranslate"><span class="pre">None</span></code>, all arrays will be resized to
 match it.  Note 3: if the arrays have different lengths, all will
 be resized to match the length of the first array.</p></li>
-<li><p><strong>attrs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) -- A set of user attributes to be carried along with this LGDO.</p></li>
+<li><p><strong>attrs</strong> -- A set of user attributes to be carried along with this LGDO.</p></li>
 </ul>
 </dd>
 </dl>
@@ -810,8 +733,6 @@ be resized to match the length of the first array.</p></li>
 <dt class="sig sig-object py" id="pygama.lgdo.table.Table.add_column">
 <span class="sig-name descname"><span class="pre">add_column</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><span class="pre">Union</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pygama.lgdo.scalar.Scalar" title="pygama.lgdo.scalar.Scalar"><span class="pre">Scalar</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pygama.lgdo.struct.Struct" title="pygama.lgdo.struct.Struct"><span class="pre">Struct</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array"><span class="pre">Array</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pygama.lgdo.vectorofvectors.VectorOfVectors" title="pygama.lgdo.vectorofvectors.VectorOfVectors"><span class="pre">VectorOfVectors</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_obj_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_warn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pygama.lgdo.table.Table.add_column" title="Permalink to this definition"></a></dt>
 <dd><p>Alias for <a class="reference internal" href="#pygama.lgdo.table.Table.add_field" title="pygama.lgdo.table.Table.add_field"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_field()</span></code></a> using table terminology 'column'.</p>
-<dl class="field-list simple">
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -823,9 +744,9 @@ be resized to match the length of the first array.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- the name for the field in the table.</p></li>
-<li><p><strong>obj</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.10)"><em>Union</em></a><em>[</em><a class="reference internal" href="#pygama.lgdo.scalar.Scalar" title="pygama.lgdo.scalar.Scalar"><em>Scalar</em></a><em>, </em><a class="reference internal" href="#pygama.lgdo.struct.Struct" title="pygama.lgdo.struct.Struct"><em>Struct</em></a><em>, </em><a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array"><em>Array</em></a><em>, </em><a class="reference internal" href="#pygama.lgdo.vectorofvectors.VectorOfVectors" title="pygama.lgdo.vectorofvectors.VectorOfVectors"><em>VectorOfVectors</em></a><em>]</em>) -- the object to be added to the table.</p></li>
-<li><p><strong>use_obj_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- if <code class="docutils literal notranslate"><span class="pre">True</span></code>, resize the table to match the length of <cite>obj</cite>.</p></li>
+<li><p><strong>name</strong> -- the name for the field in the table.</p></li>
+<li><p><strong>obj</strong> -- the object to be added to the table.</p></li>
+<li><p><strong>use_obj_size</strong> -- if <code class="docutils literal notranslate"><span class="pre">True</span></code>, resize the table to match the length of <cite>obj</cite>.</p></li>
 <li><p><strong>do_warn</strong> -- print or don't print useful info. Passed to <a class="reference internal" href="#pygama.lgdo.table.Table.resize" title="pygama.lgdo.table.Table.resize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">resize()</span></code></a> when
 <cite>use_obj_size</cite> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
 </ul>
@@ -836,19 +757,12 @@ be resized to match the length of the first array.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.table.Table.clear">
 <span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None.</span>&#160; <span class="pre">Remove</span> <span class="pre">all</span> <span class="pre">items</span> <span class="pre">from</span> <span class="pre">D.</span></span></span><a class="headerlink" href="#pygama.lgdo.table.Table.clear" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.table.Table.datatype_name">
 <span class="sig-name descname"><span class="pre">datatype_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pygama.lgdo.table.Table.datatype_name" title="Permalink to this definition"></a></dt>
 <dd><p>The name for this LGDO's datatype attribute.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -860,14 +774,11 @@ be resized to match the length of the first array.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cols</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em><em>]</em>) -- a list of column names specifying the subset of the table's columns
+<li><p><strong>cols</strong> -- a list of column names specifying the subset of the table's columns
 to be added to the dataframe.</p></li>
-<li><p><strong>copy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- When <code class="docutils literal notranslate"><span class="pre">True</span></code>, the dataframe allocates new memory and copies data
+<li><p><strong>copy</strong> -- When <code class="docutils literal notranslate"><span class="pre">True</span></code>, the dataframe allocates new memory and copies data
 into it. Otherwise, the raw <code class="docutils literal notranslate"><span class="pre">nda</span></code>'s from the table are used directly.</p></li>
 </ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.4.3)">pandas.DataFrame</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -875,12 +786,7 @@ into it. Otherwise, the raw <code class="docutils literal notranslate"><span cla
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.table.Table.is_full">
 <span class="sig-name descname"><span class="pre">is_full</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#pygama.lgdo.table.Table.is_full" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)">bool</a></p>
-</dd>
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.table.Table.join">
@@ -894,10 +800,10 @@ and this table will retain access to the joined data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>other_table</strong> (<a class="reference internal" href="#pygama.lgdo.table.Table" title="pygama.lgdo.table.Table"><em>Table</em></a>) -- the table whose columns are to be joined into this table.</p></li>
-<li><p><strong>cols</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><em>Optional</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>]</em><em>]</em>) -- a list of names of columns from <cite>other_table</cite> to be joined into
+<li><p><strong>other_table</strong> -- the table whose columns are to be joined into this table.</p></li>
+<li><p><strong>cols</strong> -- a list of names of columns from <cite>other_table</cite> to be joined into
 this table.</p></li>
-<li><p><strong>do_warn</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><em>bool</em></a>) -- set to <code class="docutils literal notranslate"><span class="pre">False</span></code> to turn off warnings associated with mismatched
+<li><p><strong>do_warn</strong> -- set to <code class="docutils literal notranslate"><span class="pre">False</span></code> to turn off warnings associated with mismatched
 <cite>loc</cite> parameter or <a class="reference internal" href="#pygama.lgdo.table.Table.add_column" title="pygama.lgdo.table.Table.add_column"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_column()</span></code></a> warnings.</p></li>
 </ul>
 </dd>
@@ -907,16 +813,12 @@ this table.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.table.Table.push_row">
 <span class="sig-name descname"><span class="pre">push_row</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pygama.lgdo.table.Table.push_row" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.table.Table.resize">
 <span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_warn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pygama.lgdo.table.Table.resize" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -936,22 +838,22 @@ to store the cumulative sum of lengths of each vector.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>flattened_data</strong> (<a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array"><em>Array</em></a>) -- If not <code class="docutils literal notranslate"><span class="pre">None</span></code>, used as the internal memory array for
+<li><p><strong>flattened_data</strong> -- If not <code class="docutils literal notranslate"><span class="pre">None</span></code>, used as the internal memory array for
 <cite>flattened_data</cite>.  Otherwise, an internal <cite>flattened_data</cite> is
 allocated based on <cite>shape_guess</cite> and <cite>dtype</cite>.</p></li>
-<li><p><strong>cumulative_length</strong> (<a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array"><em>Array</em></a>) -- If not <code class="docutils literal notranslate"><span class="pre">None</span></code>, used as the internal memory array for
+<li><p><strong>cumulative_length</strong> -- If not <code class="docutils literal notranslate"><span class="pre">None</span></code>, used as the internal memory array for
 <cite>cumulative_length</cite>. Should be <cite>dtype</cite> <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.uint32" title="(in NumPy v1.23)"><code class="xref any docutils literal notranslate"><span class="pre">numpy.uint32</span></code></a>. If
 <cite>cumulative_length</cite> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, an internal <cite>cumulative_length</cite> is
 allocated based on the first element of <cite>shape_guess</cite>.</p></li>
-<li><p><strong>shape_guess</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a><em>]</em>) -- A NumPy-format shape specification, required if either of
+<li><p><strong>shape_guess</strong> -- A NumPy-format shape specification, required if either of
 <cite>flattened_data</cite> or <cite>cumulative_length</cite> are not supplied.  The
 first element should not be a guess and sets the number of vectors
 to be stored. The second element is a guess or approximation of the
 typical length of a stored vector, used to set the initial length
 of <cite>flattened_data</cite> if it was not supplied.</p></li>
-<li><p><strong>dtype</strong> (<em>np.dtype</em>) -- Sets the type of data stored in <cite>flattened_data</cite>. Required if
+<li><p><strong>dtype</strong> -- Sets the type of data stored in <cite>flattened_data</cite>. Required if
 <cite>flattened_data</cite> is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
-<li><p><strong>attrs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) -- A set of user attributes to be carried along with this LGDO.</p></li>
+<li><p><strong>attrs</strong> -- A set of user attributes to be carried along with this LGDO.</p></li>
 </ul>
 </dd>
 </dl>
@@ -959,30 +861,18 @@ of <cite>flattened_data</cite> if it was not supplied.</p></li>
 <dt class="sig sig-object py" id="pygama.lgdo.vectorofvectors.VectorOfVectors.datatype_name">
 <span class="sig-name descname"><span class="pre">datatype_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pygama.lgdo.vectorofvectors.VectorOfVectors.datatype_name" title="Permalink to this definition"></a></dt>
 <dd><p>The name for this LGDO's datatype attribute.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.vectorofvectors.VectorOfVectors.form_datatype">
 <span class="sig-name descname"><span class="pre">form_datatype</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pygama.lgdo.vectorofvectors.VectorOfVectors.form_datatype" title="Permalink to this definition"></a></dt>
 <dd><p>Return this LGDO's datatype attribute string.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.vectorofvectors.VectorOfVectors.resize">
 <span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pygama.lgdo.vectorofvectors.VectorOfVectors.resize" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pygama.lgdo.vectorofvectors.VectorOfVectors.set_vector">
@@ -991,8 +881,6 @@ of <cite>flattened_data</cite> if it was not supplied.</p></li>
 <p class="rubric">Notes</p>
 <p><cite>flattened_data</cite> is doubled in length until <cite>nda</cite> can be appended to
 it.</p>
-<dl class="field-list simple">
-</dl>
 </dd></dl>
 
 </dd></dl>
@@ -1029,32 +917,32 @@ routine is used.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- sets the number of rows in the table. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the size will be
+<li><p><strong>size</strong> -- sets the number of rows in the table. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the size will be
 determined from the first among <cite>t0</cite>, <cite>dt</cite>, or <cite>values</cite> to return a
 valid length. If not <code class="docutils literal notranslate"><span class="pre">None</span></code>, <cite>t0</cite>, <cite>dt</cite>, and values will be
 resized as necessary to match <cite>size</cite>. If <cite>size</cite> is <code class="docutils literal notranslate"><span class="pre">None</span></code> and
 <cite>t0</cite>, <cite>dt</cite>, and <cite>values</cite> are all non-array-like, a default size of
 1024 is used.</p></li>
-<li><p><strong>t0</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em> | </em><a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array"><em>Array</em></a><em> | </em><em>np.ndarray</em>) -- <span class="math notranslate nohighlight">\(t_0\)</span> values to be used (or broadcast) to the <cite>t0</cite> column.</p></li>
-<li><p><strong>t0_units</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- units for the <span class="math notranslate nohighlight">\(t_0\)</span> values. If not <code class="docutils literal notranslate"><span class="pre">None</span></code> and <cite>t0</cite> is an
+<li><p><strong>t0</strong> -- <span class="math notranslate nohighlight">\(t_0\)</span> values to be used (or broadcast) to the <cite>t0</cite> column.</p></li>
+<li><p><strong>t0_units</strong> -- units for the <span class="math notranslate nohighlight">\(t_0\)</span> values. If not <code class="docutils literal notranslate"><span class="pre">None</span></code> and <cite>t0</cite> is an
 LGDO <a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array"><code class="xref py py-class docutils literal notranslate"><span class="pre">Array</span></code></a>, overrides what's in <cite>t0</cite>.</p></li>
-<li><p><strong>dt</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><em>float</em></a><em> | </em><a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array"><em>Array</em></a><em> | </em><em>np.ndarray</em>) -- <span class="math notranslate nohighlight">\(\delta t\)</span> values (sampling period) to be used (or
+<li><p><strong>dt</strong> -- <span class="math notranslate nohighlight">\(\delta t\)</span> values (sampling period) to be used (or
 broadcasted) to the <cite>t0</cite> column.</p></li>
-<li><p><strong>dt_units</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- units for the <cite>dt</cite> values. If not <code class="docutils literal notranslate"><span class="pre">None</span></code> and <cite>dt</cite> is an LGDO
+<li><p><strong>dt_units</strong> -- units for the <cite>dt</cite> values. If not <code class="docutils literal notranslate"><span class="pre">None</span></code> and <cite>dt</cite> is an LGDO
 <a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array"><code class="xref py py-class docutils literal notranslate"><span class="pre">Array</span></code></a>, overrides what's in <cite>dt</cite>.</p></li>
-<li><p><strong>values</strong> (<a class="reference internal" href="#pygama.lgdo.arrayofequalsizedarrays.ArrayOfEqualSizedArrays" title="pygama.lgdo.arrayofequalsizedarrays.ArrayOfEqualSizedArrays"><em>ArrayOfEqualSizedArrays</em></a><em> | </em><a class="reference internal" href="#pygama.lgdo.vectorofvectors.VectorOfVectors" title="pygama.lgdo.vectorofvectors.VectorOfVectors"><em>VectorOfVectors</em></a><em> | </em><em>np.ndarray</em>) -- The waveform data to be stored in the table. If <code class="docutils literal notranslate"><span class="pre">None</span></code> a block of
+<li><p><strong>values</strong> -- The waveform data to be stored in the table. If <code class="docutils literal notranslate"><span class="pre">None</span></code> a block of
 data is prepared based on the <cite>wf_len</cite> and <cite>dtype</cite> arguments.</p></li>
-<li><p><strong>values_units</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- units for the waveform values. If not <code class="docutils literal notranslate"><span class="pre">None</span></code> and <cite>values</cite> is an
+<li><p><strong>values_units</strong> -- units for the waveform values. If not <code class="docutils literal notranslate"><span class="pre">None</span></code> and <cite>values</cite> is an
 LGDO <a class="reference internal" href="#pygama.lgdo.array.Array" title="pygama.lgdo.array.Array"><code class="xref py py-class docutils literal notranslate"><span class="pre">Array</span></code></a>, overrides what's in <cite>values</cite>.</p></li>
-<li><p><strong>wf_len</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- The length of the waveforms in each entry of a table. If <code class="docutils literal notranslate"><span class="pre">None</span></code>
+<li><p><strong>wf_len</strong> -- The length of the waveforms in each entry of a table. If <code class="docutils literal notranslate"><span class="pre">None</span></code>
 (the default), unequal lengths are assumed and
 <a class="reference internal" href="#pygama.lgdo.vectorofvectors.VectorOfVectors" title="pygama.lgdo.vectorofvectors.VectorOfVectors"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorOfVectors</span></code></a> is used for the <cite>values</cite> column. Ignored
 if <cite>values</cite> is a 2D ndarray, in which case <code class="docutils literal notranslate"><span class="pre">values.shape[1]</span></code> is
 used.</p></li>
-<li><p><strong>dtype</strong> (<em>np.dtype</em>) -- The NumPy <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v1.23)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.dtype</span></code></a> of the waveform data. If <cite>values</cite> is
+<li><p><strong>dtype</strong> -- The NumPy <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v1.23)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.dtype</span></code></a> of the waveform data. If <cite>values</cite> is
 not <code class="docutils literal notranslate"><span class="pre">None</span></code>, this argument is ignored. If both <cite>values</cite> and
 <cite>dtype</cite> are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.float64</span></code> is used.</p></li>
-<li><p><strong>attrs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) -- A set of user attributes to be carried along with this LGDO.</p></li>
+<li><p><strong>attrs</strong> -- A set of user attributes to be carried along with this LGDO.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1073,8 +961,6 @@ not <code class="docutils literal notranslate"><span class="pre">None</span></co
 <span class="sig-name descname"><span class="pre">resize_wf_len</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_len</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#pygama.lgdo.waveform_table.WaveformTable.resize_wf_len" title="Permalink to this definition"></a></dt>
 <dd><p>Alias for <cite>wf_len.setter</cite>, for when we want to make it clear in
 the code that memory is being reallocated.</p>
-<dl class="field-list simple">
-</dl>
 </dd></dl>
 
 <dl class="py property">
